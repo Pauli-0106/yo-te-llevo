@@ -1,0 +1,45 @@
+ion-item {
+    --inner-padding-top: 10px;
+    --inner-padding-bottom: 10px;
+    --border-radius: 10px;
+    --border-width: 2px;
+    --border-color: var(--primary-color); /* Bordes morados */
+    --background: white !important; /* Forzar fondo blanco en el contenedor */
+    --color: black; /* Texto negro */
+    margin: 10px 0;
+  }
+  
+  ion-input, ion-select, ion-textarea {
+    --background: white !important; /* Forzar fondo blanco en los inputs */
+    --color: black; /* Texto negro */
+    --placeholder-color: #808080; /* Color de los placeholders */
+  }
+  
+  ion-list {
+    background-color: white !important; /* Fondo blanco de todo el contenedor */
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  ion-button {
+    width: 45%;
+    --border-radius: 20px;
+  }
+  
+  ion-textarea {
+    height: 100px;
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  
+  ion-content {
+    --background: #ffffff; /* Fondo blanco */
+  }
+  

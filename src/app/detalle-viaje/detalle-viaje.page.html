@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #800080;">
+    <ion-buttons slot="start">
+      <ion-button fill="clear">
+        <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color: black;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding content-container" style="--background: #ffffff !important;">
+  <div class="content-container">
+    <h2 style="text-align: center; margin-bottom: 20px;">Crear Viaje</h2>
+
+    <ion-item class="custom-input">
+      <ion-label position="floating">Ubicación Origen</ion-label>
+      <ion-input [(ngModel)]="ubicacionOrigen" placeholder="Ingrese la ubicación de origen"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-label position="floating">Ubicación Destino</ion-label>
+      <ion-input [(ngModel)]="ubicacionDestino" placeholder="Ingrese la ubicación de destino"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-label position="floating">Costo del Viaje</ion-label>
+      <ion-input type="number" [(ngModel)]="costo" placeholder="Ingrese el costo del viaje"></ion-input>
+    </ion-item>
+
+    <div class="buttons-container">
+      <ion-button expand="block" fill="solid" class="custom-button" (click)="crearViaje()">
+        Crear Viaje
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

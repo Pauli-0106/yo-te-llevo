@@ -1,0 +1,66 @@
+<ion-menu side="end" content-id="main-content">
+  <ion-header>
+    <ion-toolbar style="--background: #800080;">
+      <ion-title style="color: black;">Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <!-- Información del usuario -->
+      <ion-item>
+        <ion-label>
+          <h2 style="color: black;">Usuario</h2>
+          <p style="color: black;">{{ email }}</p>
+        </ion-label>
+      </ion-item>
+
+      <!-- Botón de Cerrar Sesión -->
+      <ion-item button (click)="logout()">
+        <ion-icon name="log-out-outline" slot="start"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #800080;"> 
+    <ion-buttons slot="start">
+      <ion-button fill="clear">
+        <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color: black; display: block;"></ion-menu-button> 
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="static-content" style="--background: #ffffff !important;" id="main-content">
+  <div *ngIf="email">
+    <p style="color: black; padding: 10px;">Bienvenido: {{ email }}</p>
+  </div>
+  <div class="button-container">
+    <ion-button expand="block" fill="outline" class="custom-button" (click)="goToActividad()">
+      Lista de Contactos
+    </ion-button>
+    <ion-button expand="block" fill="outline" class="custom-button" (click)="goToTuUsuario()">
+      Registrar Vehículo
+    </ion-button>
+    <ion-button expand="block" fill="outline" class="custom-button" (click)="goToVehiculos()">
+      Lista de Vehículos
+    </ion-button>
+    <ion-button expand="block" fill="outline" class="custom-button" (click)="goToDetalleViaje()">
+      Crear Viaje
+    </ion-button>
+    <ion-button expand="block" fill="outline" class="custom-button" (click)="goToRutaTu()">
+      Lista de Viajes
+    </ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #800080;"></ion-toolbar>
+</ion-footer>
+

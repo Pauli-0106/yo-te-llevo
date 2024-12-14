@@ -1,0 +1,40 @@
+ion-content {
+  --background: #ffffff; /* Fondo blanco para la vista */
+}
+
+.content-container {
+  padding: 16px;
+  background: transparent; /* Eliminamos cualquier fondo oscuro residual */
+}
+
+.list-ios{
+    background: white!important;
+  }
+
+ion-item p {
+  color: black; 
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ion-item {
+  --background: transparent; /* Fondo transparente para los inputs */
+  --border-color: #800080; /* Borde morado */
+  --border-radius: 10px;
+  --padding-start: 10px;
+}
+
+ion-input {
+  --placeholder-color: #ccc; /* Placeholder gris */
+  --color: black; /* Texto en negro */
+}
+
+ion-label {
+  color: black; /* Cambiamos las etiquetas a negro */
+}
+
+ion-button {
+  --background: #800080; /* Botón morado */
+  --color: white; /* Texto blanco */
+  border-radius: 10px;
+}

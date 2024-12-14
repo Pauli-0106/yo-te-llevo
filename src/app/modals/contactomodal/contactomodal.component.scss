@@ -1,0 +1,25 @@
+.message {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    width: fit-content;
+  }
+  
+  .me {
+    background-color: #4CAF50;
+    color: white;
+    margin-left: auto;
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .chat-input ion-input {
+    flex: 1;
+    margin-right: 10px;
+  }
+  

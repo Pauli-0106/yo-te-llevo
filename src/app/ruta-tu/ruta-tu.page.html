@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #800080;">
+    <ion-buttons slot="start">
+      <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color: black;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content-container" style="--background: #ffffff !important;">
+  <!-- Estado de carga -->
+  <div *ngIf="loading" class="loading-container">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Cargando viajes...</p>
+  </div>
+
+  <!-- Lista de viajes -->
+  <div *ngIf="!loading && viajes.length > 0">
+    <ion-list>
+      <ion-item *ngFor="let viaje of viajes">
+        <ion-label>
+          <h2>Origen: {{ viaje.ubicacion_origen }}</h2>
+          <p>Destino: {{ viaje.ubicacion_destino }}</p>
+          <p>Costo: {{ viaje.costo }}</p>
+          <p>Vehículo: {{ viaje.id_vehiculo }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- Sin viajes -->
+  <div *ngIf="!loading && viajes.length === 0" class="no-data">
+    <p>No se encontraron viajes registrados.</p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #800080;"></ion-toolbar>
+</ion-footer>

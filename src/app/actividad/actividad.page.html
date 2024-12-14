@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #800080;">
+    <ion-buttons slot="start">
+      <ion-button fill="clear">
+        <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color: black;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content-container" style="--background: #ffffff !important;">
+  <div *ngIf="loading" class="loading-container">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Cargando usuarios...</p>
+  </div>
+
+  <div *ngIf="!loading && usuarios.length > 0">
+    <ion-list>
+      <ion-item *ngFor="let usuario of usuarios">
+        <ion-label>
+          <h2>{{ usuario.nombre }}</h2> <!-- Propiedad "nombre" -->
+          <p>Correo: {{ usuario.correo }}</p> <!-- Propiedad "correo" -->
+          <p>Teléfono: {{ usuario.telefono }}</p> <!-- Propiedad "telefono" -->
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="!loading && usuarios.length === 0" class="no-data">
+    <p>No se encontraron usuarios registrados.</p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #800080;"></ion-toolbar>
+</ion-footer>

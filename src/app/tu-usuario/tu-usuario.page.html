@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #800080;">
+    <ion-buttons slot="start">
+      <ion-button fill="clear">
+        <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color: black; display: block;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" style="--background: #ffffff !important;">
+  <div>
+    <p style="color: black; padding: 10px;">Registro de Vehículo</p>
+  </div>
+  
+  <ion-list>
+   
+   
+
+    <ion-item>
+      <ion-input [(ngModel)]="patente" name="patente" placeholder="patente"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input [(ngModel)]="marca" name="marca" placeholder="marca"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input [(ngModel)]="modelo" name="modelo" placeholder="modelo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input [(ngModel)]="anio" name="anio" placeholder="anio"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input [(ngModel)]="color" name="color" placeholder="color"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input [(ngModel)]="tipoCombustible" name="tipoCombustible" placeholder="tipoCombustible"></ion-input>
+    </ion-item>
+
+    <ion-button 
+      expand="block" 
+      style="--background: #800080; color: white; margin: 15px 0; border-radius: 20px; width: 100%;" 
+      (click)="abrirInputFile()">
+      Subir Imagen del Vehículo
+    </ion-button>
+    <input type="file" accept="image/*" hidden #fileInput (change)="onFileChange($event)">
+    
+    <ion-button 
+    expand="block" 
+    style="--background: #800080; color: white; margin: 15px 0; border-radius: 20px; width: 100%;" 
+    (click)="registrarVehiculo()">
+    Registrar Vehículo
+  </ion-button>
+</ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #800080;"></ion-toolbar>
+</ion-footer>

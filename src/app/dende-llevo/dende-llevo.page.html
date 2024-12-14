@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #800080;"> <!-- Color morado directo -->
+    <ion-buttons slot="start">
+      <ion-button fill="clear">
+        <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color: black;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding content-container" style="--background: #ffffff !important;"> <!-- Fondo blanco forzado -->
+  <div class="content-container">
+    <h2 style="text-align: center; color: black;">Listo!</h2>
+
+    <ion-item class="custom-input">
+      <ion-input placeholder="Usuario llevado"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-input placeholder="Dirección o punto estrella"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-input placeholder="Horario"></ion-input>
+    </ion-item>
+    
+    <div class="buttons-container">
+      <ion-button expand="block" class="cancel-button">Cancelar Viaje</ion-button>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #800080;"> <!-- Color morado directo en el footer -->
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" style="--background: #800080;"> <!-- Footer morado -->
+        <ion-tab-button tab="inicio">
+          <ion-icon name="home-outline" style="color: black;"></ion-icon> <!-- Ícono en negro -->
+          <ion-label style="color: black;">Inicio</ion-label> <!-- Texto en negro -->
+        </ion-tab-button>
+
+        <ion-tab-button tab="actividad">
+          <ion-icon name="list-outline" style="color: black;"></ion-icon> <!-- Ícono en negro -->
+          <ion-label style="color: black;">Actividad</ion-label> <!-- Texto en negro -->
+        </ion-tab-button>
+
+        <ion-tab-button tab="cuenta">
+          <ion-icon name="person-outline" style="color: black;"></ion-icon> <!-- Ícono en negro -->
+          <ion-label style="color: black;">Cuenta</ion-label> <!-- Texto en negro -->
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

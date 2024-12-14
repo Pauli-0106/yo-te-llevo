@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar style="--background: #800080; color: white;">
+    <ion-title>Contacto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()" style="color: white;">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #ffffff;">
+  <div *ngFor="let message of messages" class="message" [ngClass]="{'me': message.sender === 'yo'}">
+    <p>{{ message.content }}</p>
+  </div>
+
+  <div class="chat-input" style="display: flex; align-items: center; margin-top: 10px;">
+    <ion-input [(ngModel)]="newMessage" placeholder="Escribe un mensaje..." style="flex: 1; margin-right: 10px; border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+    <ion-button (click)="sendMessage()" style="--background: #800080; --color: white;">Enviar</ion-button>
+  </div>
+</ion-content>

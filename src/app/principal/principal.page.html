@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #800080;">
+    <ion-buttons slot="start">
+      <ion-button fill="clear">
+        <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color: black;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content-container" style="--background: #ffffff !important;">
+  <div *ngIf="loading" class="loading-container">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Cargando vehículos...</p>
+  </div>
+
+  <div *ngIf="!loading && vehiculos.length > 0">
+    <ion-list>
+      <ion-item *ngFor="let vehiculo of vehiculos">
+        <ion-label>
+          <h2>Patente: {{ vehiculo.patente }}</h2>
+          <p>Marca: {{ vehiculo.marca }}</p>
+          <p>Modelo: {{ vehiculo.modelo }}</p>
+          <p>Año: {{ vehiculo.anio }}</p>
+          <p>Color: {{ vehiculo.color }}</p>
+          <p>Combustible: {{ vehiculo.tipoCombustible }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="!loading && vehiculos.length === 0" class="no-data">
+    <p>No se encontraron vehículos registrados.</p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #800080;"></ion-toolbar>
+</ion-footer>

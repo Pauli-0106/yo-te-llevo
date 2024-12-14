@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #800080;"> <!-- Color morado directo -->
+    <!-- Logo en el lado izquierdo -->
+    <ion-buttons slot="start">
+      <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+    </ion-buttons>
+
+    <!-- Icono de hamburguesa en el lado derecho -->
+    <ion-buttons slot="end">
+      <ion-menu-button style="color: black;display: block;"></ion-menu-button> <!-- Icono de hamburguesa negro -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding content-container" style="--background: #ffffff !important;"> <!-- Fondo blanco forzado -->
+  <div class="content-container">
+    <h2 style="text-align: center; color: black;">¿Dónde voy?</h2>
+
+    <ion-item class="custom-input">
+      <ion-input placeholder="Dirección" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+    </ion-item>
+
+    <h3 style="text-align: center; color: black;">Puntos estrellas</h3>
+
+    <ion-item class="custom-input">
+      <ion-input placeholder="Punto 1" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-input placeholder="Tarifa" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-input placeholder="Punto 2" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-input placeholder="Tarifa" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-label>Horarios</ion-label>
+      <ion-select interface="popover" style="border-radius: 10px; border: 1px solid #ccc;">
+        <ion-select-option value="opcion1">Opción 1</ion-select-option>
+        <ion-select-option value="opcion2">Opción 2</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class="buttons-container" style="margin-top: 20px;">
+      <ion-button expand="block" color="primary" style="--border-radius: 20px; margin-bottom: 10px;">Guardar</ion-button>
+      <ion-button expand="block" color="secondary" style="--border-radius: 20px;">Editar</ion-button>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #800080;"> <!-- Color morado directo en el footer -->
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" style="--background: #800080;"> <!-- Footer morado -->
+        <ion-tab-button tab="inicio">
+          <ion-icon name="home-outline" style="color: black;"></ion-icon> <!-- Ícono en negro -->
+          <ion-label style="color: black;">Inicio</ion-label> <!-- Texto en negro -->
+        </ion-tab-button>
+
+        <ion-tab-button tab="actividad">
+          <ion-icon name="list-outline" style="color: black;"></ion-icon> <!-- Ícono en negro -->
+          <ion-label style="color: black;">Actividad</ion-label> <!-- Texto en negro -->
+        </ion-tab-button>
+
+        <ion-tab-button tab="cuenta">
+          <ion-icon name="person-outline" style="color: black;"></ion-icon> <!-- Ícono en negro -->
+          <ion-label style="color: black;">Cuenta</ion-label> <!-- Texto en negro -->
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

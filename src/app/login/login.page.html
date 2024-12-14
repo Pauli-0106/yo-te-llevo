@@ -1,0 +1,53 @@
+<ion-content [fullscreen]="true" class="ion-padding content-container" style="--background: #ffffff !important;">
+  <!-- Imagen del logo -->
+  <div class="logo">
+    <img src="assets/icon/logo.png" alt="Logo de la App" class="small-image"/>
+  </div>
+
+  <!-- Imagen de usuario -->
+  <div class="car-image">
+    <img src="assets/icon/usuario.png" alt="Icono de Usuario" class="small-image"/>
+  </div>
+
+  <!-- Contenedor del formulario de inicio de sesión -->
+  <div class="login-container">
+    <ion-card class="custom-card">
+      <ion-card-header>
+        <ion-card-title>Iniciar sesión</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form>
+          <ion-item class="custom-input">
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input [(ngModel)]="email"  name="email" type ="email" required></ion-input>
+          </ion-item>
+
+          <ion-item class="custom-input">
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
+          </ion-item>
+
+          <ion-button (click)="login()"expand="#800080" class="custom-button">Iniciar sesión</ion-button>
+        </form>
+
+        <div>
+          <ion-grid>
+            <ion-row>
+              <ion-col class="registrar" size="6">
+                <div>
+                  <a [routerLink]="['/usuario-yo']">Registrar</a>
+                </div>
+              </ion-col>
+              <ion-col class="recuperar" size="6">
+                <div>
+                  <a [routerLink]="['/recuperar-contrasena']">Recuperar</a>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,26 @@
+.content-container {
+  padding: 20px;
+}
+
+.custom-input {
+  --background: #f8f8f8;
+  --border-radius: 8px;
+  margin-bottom: 15px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --inner-padding-end: 8px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button {
+  --background: #800080;
+  --color: black;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+ion-label {
+  font-weight: bold;
+  color: #4a4a4a;
+}

@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centrar todo el contenido verticalmente */
+    text-align: center; /* Asegurar que todo esté centrado horizontalmente */
+  }
+  
+  .logo img, .car-image img {
+    max-width: 80%; /* Las imágenes se adaptan a diferentes tamaños de pantalla */
+    height: auto;
+    margin: 0 auto; /* Centrar horizontalmente las imágenes */
+  }
+  
+  .car-image {
+    margin-top: 20px;
+  }
+  
+  .loading-spinner {
+    margin-top: 30px; /* Añadir un margen superior para separar el spinner de las imágenes */
+    --color: #800080; /* Spinner morado */
+  }
+  
+  ion-content {
+    --background: #ffffff;
+  }
+  

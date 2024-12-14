@@ -1,0 +1,39 @@
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+    background-color: #ffffff !important; 
+  }
+  
+  .card {
+    width: 90%;
+    padding: 20px;
+    border: 2px solid var(--primary-color); 
+    border-radius: 15px;
+    background-color: rgba(128, 0, 128, 0.1); 
+  }
+  
+  ion-item {
+    --inner-padding-top: 10px;
+    --inner-padding-bottom: 10px;
+    --border-radius: 10px;
+    --border-width: 2px;
+    --border-color: var(--primary-color);
+    margin: 10px 0;
+    background-color: white !important; 
+  }
+  
+  ion-toolbar {
+    --background: #800080;
+  }
+  
+  ion-footer ion-tab-bar {
+    --background: #800080; 
+  }
+  
+  ion-icon, ion-label {
+    color: black !important; 
+  }
+  

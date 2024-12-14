@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #800080;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login" style="color: white;"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; display: block; margin: 0 auto;">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="--background: #ffffff;"> 
+  <div class="content-container"> 
+    <ion-list>
+      <ion-item>
+        <ion-input [(ngModel)]="nombre" name="nombre" placeholder="Nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="email" name="email" type="email" placeholder="Mail"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="password" name="password" type="password" placeholder="Password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="telefono" name="telefono" placeholder="WhatsApp"></ion-input>
+      </ion-item>
+      
+      <div class="profile-pic-container">
+        <img [src]="profileImage" *ngIf="profileImage" alt="Imagen de perfil">
+        <ion-button expand="block" (click)="selectImage()">Subir Imagen de Perfil</ion-button>
+        <input type="file" accept="image/*" #fileInput hidden (change)="onFileSelected($event)">
+      </div>
+
+      <form (ngSubmit)="registrar()">
+        <div class="buttons-container">
+          <ion-button type="submit" expand="block">Guardar</ion-button>
+        </div>
+      </form>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #800080;"></ion-toolbar>
+</ion-footer>
+
