@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">yo-te-llevo</string>
+    <string name="title_activity_main">yo-te-llevo</string>
+    <string name="package_name">com.pauli.yotellevo</string>
+    <string name="custom_url_scheme">com.pauli.yotellevo</string>
+</resources>

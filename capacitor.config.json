@@ -1,0 +1,6 @@
+{
+  "appId": "com.pauli.yotellevo",
+  "appName": "yo-te-llevo",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
